@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Компания NZXT</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ <header>
+   <div id="logo" onclick="slowScroll('#top')">
+     <span>NZXT</span>
+   </div>
+   <div id="about">
+    <a href="#" title="Воз" onclick="slowScroll('#main')">История</a>
+    <a href="#" title="Адреса" onclick="slowScroll('#adres')">Продукты</a>
+    <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+    <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+   </div>
+ </header>
+
+ <div id="top">
+   <h1>Сайт для ознакомления с компанией</h1>
+   <h3></h3>
+ </div>
+
+<div id="main">
+  <div class="intro">
+    <h2>Краткая история компании</h2>
+    <span></span>
+  </div>
+  <div class="text">
+    <span>NZXT-американский производитель компьютерного оборудования, базирующийся в Лос-Анджелесе, Калифорния . Компания наиболее известна тем, что является крупным производителем компьютерных корпусов, компонентов и аксессуаров для рынка компьютерных игр.
+      <p>Компания NZXT была основана в 2004 году Джонни Хоу. Первым продуктом компании был NZXT Guardian,который представлял собой корпус с пластиковым передним безелем, напоминающим игрушки-трансформеры и световые эффекты.
+      С течением времени они постепенно распространились на другие жанры компьютерного оборудования, включая компьютерные источники питания, компьютерное охлаждение, материнские платы</p></span>
+  </div>
+</div>
+
+ <div id="adres">
+   <h2>Комплектующие</h2>
+   <h4>Которые делает NZXT</h4>
+
+   <div class="img">
+     <img src="https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/2943/cover_d5401bfb86b46c7a.png" alt="">
+     <span>Системы водяного охлаждения</span>
+   </div>
+   <div class="img">
+     <img src="https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product/cover_image_content/840/card_1ab93e87196cf33a.png" alt="">
+     <span>Корпусы</span>
+   </div>
+   <div class="img">
+     <img src="https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/2842/cover_8749c6bf5a4942ce.png" alt="">
+     <span>Блоки питания</span>
+   </div>
+   <div class="img">
+     <img src="https://sta3-nzxtcorporation.netdna-ssl.com/uploads/product_image/image/1727/cover_e849a3c7e3550e1d.png" alt="">
+     <span>Материнские платы</span>
+   </div>
+ </div>
+
+<div id="contacts">
+  <center><h5>Обратная связь</h5></center>
+  <form id="form_input">
+    <label for="name">Имя <span>*</span></label><br>
+    <input type="text"placeholder="Введите имя" name="name" id="name"><br>
+    <label for="email">Ваша почта <span>*</span></label><br>
+    <input type="email" placeholder="Введите email" name="email" id="email"><br>
+    <label for="message">Сообщение <span>*</span></label><br>
+    <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+    <div id="mees_end" class="btn">Отправить</div>
+  </form>
+</div>
+
+<div id="faq">
+  <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">О создателе сайта</span>
+      <p>Сайт создал Тирский Андрей Ильич студент группы КС-18-2 ГБПОУИО «ИАТ»</p>
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">О сайте</span>
+      <p>Все материалы на сайте представлены исключительно для ознакомления и не могут быть использованы в коммерческих целях.</p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script>
+   function slowScroll(id){
+     $('html, body').animate({
+       scrollTop: $(id).offset().top
+     }, 500);
+   }
+
+   $(document).on("scroll", function() {
+     if($(window).scrollTop() === 0)
+       $("header").removeClass("fixed");
+      else
+        $("header").attr("class","fixed");
+   });
+ </script>
+</body>
+</html>
